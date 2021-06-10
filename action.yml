@@ -1,7 +1,13 @@
-name: 'GitHub Action'
+name: 'seqflow action'
 description: ''
+inputs:
+  callback:
+    description: 'script to be executed on each version branch'
+    required: true
 runs:
   using: 'composite'
   steps: 
-    - run: echo 'Hello World'
+    - run: |
+        CALLBACK='${{inputs.callback}}'
+        . ${{github.action_path}}/action.sh
       shell: bash
