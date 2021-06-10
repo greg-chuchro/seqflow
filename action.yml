@@ -8,6 +8,6 @@ runs:
   using: 'composite'
   steps: 
     - run: |
-        CALLBACK='${{inputs.callback}}'
+        SEQFLOW_CALLBACK='${{inputs.callback}}'
         . ${{github.action_path}}/action.sh
       shell: bash
