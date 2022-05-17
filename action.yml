@@ -9,5 +9,5 @@ runs:
   steps: 
     - run: |
         SEQFLOW_CALLBACK='${{inputs.callback}}'
-        . ${{github.action_path}}/action.sh
+        . $GITHUB_ACTION_PATH/action.sh
       shell: bash
